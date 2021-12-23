@@ -1,5 +1,11 @@
 const selector = (obj, keys) => {
-    // Ваше решение должно быть здесь
+	let result = obj, temp;
+	for (let i = 0; i < keys.length; i++) {
+		temp = result[keys[i]];
+		result = temp;
+		if (result === undefined) return "";
+	}
+	return result;
 };
 
 module.exports = selector;
